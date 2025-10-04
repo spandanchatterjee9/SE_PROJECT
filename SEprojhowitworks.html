@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVRENT | How It Works</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <i data-feather="navigation" class="w-8 h-8 text-indigo-600"></i>
+                            <span class="ml-2 text-2xl font-bold text-indigo-600">REVRENT</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                    <a href="howitworks.html" class="text-gray-900 inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm font-medium">How It Works</a>
+                    <a href="about.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+<a href="signin.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+                How REVRENT Works
+            </h1>
+            <p class="mt-6 max-w-3xl mx-auto text-xl text-gray-500">
+                Our simple process helps you find the perfect vehicle rental in minutes
+            </p>
+        </div>
+
+        <!-- Steps -->
+        <div class="mt-16">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                <!-- Step 1 -->
+                <div class="relative">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <span class="text-xl font-bold">1</span>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Search for Vehicles</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Enter your location and the type of vehicle you need. Our system will scan all major rental platforms in your area.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative mt-10 lg:mt-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <span class="text-xl font-bold">2</span>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Compare Options</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        View all available options side-by-side with transparent pricing, vehicle specs, and user ratings.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative mt-10 lg:mt-0">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                        <span class="text-xl font-bold">3</span>
+                    </div>
+                    <h3 class="mt-6 text-lg font-medium text-gray-900">Book & Ride</h3>
+                    <p class="mt-2 text-base text-gray-500">
+                        Select your preferred option and book directly through our platform. Your vehicle will be waiting!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Integration -->
+        <div class="mt-20 bg-white shadow overflow-hidden sm:rounded-lg">
+            <div class="px-4 py-5 sm:px-6">
+                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                    Real-time Data Integration
+                </h3>
+                <p class="mt-1 max-w-2xl text-sm text-gray-500">
+                    We aggregate data from multiple rental platforms to give you the best options.
+                </p>
+            </div>
+            <div class="border-t border-gray-200 px-4 py-5 sm:p-0">
+                <dl class="sm:divide-y sm:divide-gray-200">
+                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Supported Platforms
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            Bounce, Vogo, Yulu, Rapido, and more
+                        </dd>
+                    </div>
+                    <div class="py-4 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+                        <dt class="text-sm font-medium text-gray-500">
+                            Data Refresh Frequency
+                        </dt>
+                        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
+                            Every 15 minutes to ensure availability
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

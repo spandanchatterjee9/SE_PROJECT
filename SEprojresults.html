@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVRENT | Search Results</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4LYQEOp0cJZP8YwQb9S7-v3k4L8XjZvQ&libraries=places"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center">
+                            <i data-feather="navigation" class="w-8 h-8 text-indigo-600"></i>
+                            <span class="ml-2 text-2xl font-bold text-indigo-600">REVRENT</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">Home</a>
+                    <a href="howitworks.html" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">How It Works</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+                    <a href="signin.html" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Box -->
+    <div class="bg-indigo-700 py-8 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="search-box bg-white p-6 rounded-lg shadow-lg">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <div class="flex-1">
+                        <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
+                        <div class="mt-1 relative rounded-md shadow-sm">
+                            <input type="text" name="location" id="location" class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-3 pr-12 py-3 sm:text-sm border-gray-300 rounded-md" placeholder="Udupi">
+                            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                                <i data-feather="map-pin" class="h-5 w-5 text-gray-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <label for="vehicle-type" class="block text-sm font-medium text-gray-700">Vehicle Type</label>
+                        <select id="vehicle-type" name="vehicle-type" class="mt-1 block w-full pl-3 pr-10 py-3 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
+                            <option>All Vehicles</option>
+                            <option selected>Motorcycle</option>
+                            <option>Scooter</option>
+                            <option>Electric Scooter</option>
+                            <option>Three-Wheeler</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button type="button" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Search Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Section -->
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold text-gray-900">4 Results in Udupi</h2>
+            <p class="text-gray-500">Motorcycles available for rent</p>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Result Card 1 -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <i data-feather="settings" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <h3 class="text-lg font-medium text-gray-900">Royal Enfield Classic 350</h3>
+                            <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap">
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="star" class="flex-shrink-0 mr-1.5 h-5 w-5 text-yellow-400"></i>
+                                    4.5
+                                </div>
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="clock" class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                    ₹199/hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-900 text-sm">via RentMyRide</span>
+                        </div>
+                        <button type="button" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Card 2 -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <i data-feather="settings" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <h3 class="text-lg font-medium text-gray-900">Bajaj Pulsar 150</h3>
+                            <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap">
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="star" class="flex-shrink-0 mr-1.5 h-5 w-5 text-yellow-400"></i>
+                                    4.2
+                                </div>
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="clock" class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                    ₹149/hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-900 text-sm">via WheelStreet</span>
+                        </div>
+                        <button type="button" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Card 3 -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <i data-feather="settings" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <h3 class="text-lg font-medium text-gray-900">TVS Apache RTR 160</h3>
+                            <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap">
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="star" class="flex-shrink-0 mr-1.5 h-5 w-5 text-yellow-400"></i>
+                                    4.3
+                                </div>
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="clock" class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                    ₹179/hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-900 text-sm">via OnnBikes</span>
+                        </div>
+                        <button type="button" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Card 4 -->
+            <div class="bg-white overflow-hidden shadow rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-3">
+                            <i data-feather="settings" class="h-6 w-6 text-white"></i>
+                        </div>
+                        <div class="ml-5 w-0 flex-1">
+                            <h3 class="text-lg font-medium text-gray-900">Hero Splendor Plus</h3>
+                            <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap">
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="star" class="flex-shrink-0 mr-1.5 h-5 w-5 text-yellow-400"></i>
+                                    4.0
+                                </div>
+                                <div class="mt-2 flex items-center text-sm text-gray-500 sm:mr-6">
+                                    <i data-feather="clock" class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"></i>
+                                    ₹129/hr
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 flex justify-between items-center">
+                        <div>
+                            <span class="text-gray-900 text-sm">via Royal Brothers</span>
+                        </div>
+                        <button type="button" class="inline-flex items-center px-3 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
+                            Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-300 hover:text-white">About</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Careers</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Blog</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Support</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Help Center</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Safety</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">FAQ</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
+                    <div class="mt-4 space-y-4">
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Terms</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Privacy</a><br>
+                        <a href="#" class="text-base text-gray-300 hover:text-white">Cookie Policy</a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Connect</h3>
+                    <div class="mt-4 flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="facebook" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="instagram" class="h-6 w-6"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i data-feather="twitter" class="h-6 w-6"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                <p class="text-base text-gray-400">
+                    &copy; 2023 REVRENT. All rights reserved.
+                </p>
+                <div class="mt-8 md:mt-0">
+                    <p class="text-base text-gray-400">
+                        Compare. Choose. Cruise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Initialize Google Places Autocomplete
+        function initAutocomplete() {
+            const input = document.getElementById('location');
+            const options = {
+                types: ['(cities)'],
+                componentRestrictions: {country: 'in'}
+            };
+            new google.maps.places.Autocomplete(input, options);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initAutocomplete();
+        });
+    </script>
+</body>
+</html>
